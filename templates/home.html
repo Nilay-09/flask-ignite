@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ignited Flask</title>
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div>
+      <h1>{{company_name }} Carriers </h1>
+    </div>
+
+    <div>
+      <img src="https://d7cc05cb-361a-4ea1-bb89-9c81fe616e7c-00-149kca15ui4et.janeway.replit.dev/static/banner2.jpg" width='100%' height='300'/>
+    </div>
+
+    <div>
+      <h2> About Us</h2>
+      <p>Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough to feel ways about stuff! Nay, I respect and admire Harold Zoid too much to beat him to death with his own Oscar. Tell them I hate them.
+
+      And remember, don't do anything that affects anything, unless it turns out you were supposed to, in which case, for the love of God, don't not do it! Fetal stemcells, aren't those controversial? The key to victory is discipline, and that means a well made bed. You will practice until you can make your bed in your sleep.
+
+      Oh yeah, good luck with that. It must be wonderful. I was having the most wonderful dream. Except you were there, and you were there, and you were there! No! I want to live! There are still too many things I don't own!</p>
+
+    </div>
+
+    <div>
+      <h2>Open Positions</h2>
+
+      <div>
+        <ul>
+          {% for job in jobs %}
+            <li>
+              <h3>{{ job['profile'] }}</h3>
+              <p>Location: {{ job['location'] }}</p>
+              <p>Salary: {{ job['salary'] }}</p>
+              <button>Apply Now</button>
+            </li>
+          {% endfor %}
+          
+        </ul>
+      </div>
+
+      <div>
+        <button>Contact Us</button>
+      </div>
+
+      
+    </div>
+  </div>
+</body>
+</html>
